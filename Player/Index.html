@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link defer rel="stylesheet" href="Main.css" />
+
+</head>
+<body>
+
+<!--Search and Queue div (Side Bar)-->
+<div class="sidebar">
+    <ul id=SidebarList>
+        <li>
+            <form>
+                <input type="text" id="searchInput" placeholder="Enter your search query">
+                <input type="button" id="searchButton" value="Search"><input type="button" id="NextButton"  value="Play Next">
+            </form>
+        </li>
+    <li>
+        <div id="searchResults" style="clear: both;"></div>
+    </li>
+    <form>
+        <input type="text" id="SearchBar" placeholder="Video link" style="display: none;">
+    </form>
+    <li>
+        <div class="Queue">
+            <h2>Queue:</h2>
+
+            <ul id="QueueList"></ul>
+        </div>
+    </li>
+</div>
+
+<!--Player-->
+<div class="MainContent">
+    <div class="Player">
+        <h2 id="Title"></h2>
+        <iframe id="VideoPlayer" width="100%" height="600px" src="https://www.youtube.com/embed/aC48Cm1eWLY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script src="Script.js"></script>
+</body>
+</html>
