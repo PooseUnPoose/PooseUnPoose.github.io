@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="Instructions">
+        <h1>Hangman</h1>
+        <p>Guess the word by selecting letters.
+        <br>Incorrect guesses will result in a body part being drawn.
+        <br>Correct guesses will fill in the blanks.
+        <br>Guess the word before</p>
+        <div class="Controls" style="margin-top:2%;">
+            <button onclick="GameRestart()">New Game</button>
+        </div>
+        <div id="GameStatus">
+            <strong><p id="GameStatusText"> </p></strong>
+        </div>
+    </div>
+    <div id="Game" style="display: none;">
+        <svg height="400" width="400">
+                <g id="Head" style="display: none;">
+                    <circle cx="200" cy="80" r="20" stroke="black" stroke-width="4" fill="white"/></g>
+                <line style="display: none;" id="Body" x1="200" y1="100" x2="200" y2="150" />
+                <line style="display: none;" id="LArm" x1="200" y1="120" x2="170" y2="140" />
+                <line style="display: none;" id="RArm" x1="200" y1="120" x2="230" y2="140" />
+                <line style="display: none;" id="LLeg" x1="200" y1="150" x2="180" y2="190" />
+                <line style="display: none;" id="RLeg" x1="200" y1="150" x2="220" y2="190" />
+                <line id ="Floor" x1="10" y1="250" x2="400" y2="250" />
+                <line style="display: none;" id="VerticalSupport" x1="100" y1="250" x2="100" y2="20" />
+                <line style="display: none;" id="HorizontalBeam" x1="100" y1="20" x2="200" y2="20" />
+                <line style="display: none;" id="Rope" x1="200" y1="20" x2="200" y2="60" />
+        </svg>
+
+    <div class="Guesses" style="display: block;">
+        <div>
+            <p>Word: <span id="Word"></span></p>
+        </div>
+        <div id="SoloLetters">
+            <button id = "a" onclick="CheckLetter()" value="a">a</button>
+            <button id = "b" onclick="CheckLetter()" value="b">b</button>
+            <button id = "c" onclick="CheckLetter()" value="c">c</button>
+            <button id = "d" onclick="CheckLetter()" value="d">d</button>
+            <button id = "e" onclick="CheckLetter()" value="e">e</button>
+            <button id = "f" onclick="CheckLetter()" value="f">f</button>
+            <button id = "g" onclick="CheckLetter()" value="g">g</button>
+            <button id = "h" onclick="CheckLetter()" value="h">h</button>
+            <button id = "i" onclick="CheckLetter()" value="i">i</button>
+            <button id = "j" onclick="CheckLetter()" value="j">j</button>
+            <button id = "k" onclick="CheckLetter()" value="k">k</button>
+            <button id = "l" onclick="CheckLetter()" value="l">l</button>
+            <button id = "m" onclick="CheckLetter()" value="m">m</button>
+            <button id = "n" onclick="CheckLetter()" value="n">n</button>
+            <button id = "o" onclick="CheckLetter()" value="o">o</button>
+            <button id = "p" onclick="CheckLetter()" value="p">p</button>
+            <button id = "q" onclick="CheckLetter()" value="q">q</button>
+            <button id = "r" onclick="CheckLetter()" value="r">r</button>
+            <button id = "s" onclick="CheckLetter()" value="s">s</button>
+            <button id = "t" onclick="CheckLetter()" value="t">t</button>
+            <button id = "u" onclick="CheckLetter()" value="u">u</button>
+            <button id = "v" onclick="CheckLetter()" value="v">v</button>
+            <button id = "w" onclick="CheckLetter()" value="w">w</button>
+            <button id = "x" onclick="CheckLetter()" value="x">x</button>
+            <button id = "y" onclick="CheckLetter()" value="y">y</button>
+            <button id = "z" onclick="CheckLetter()" value="z">z</button>
+        </div>
+        <input style="margin-top: 3%; margin-bottom: 5%;" type="text" id="WordGuess" placeholder="Guess the word" size="15">
+            <button onclick="CheckWord()">Guess</button>
+    </div>
+    </div>
+
+
+    
+
+
+    <script src="Hangman.js"></script>
+</body>
+</html>

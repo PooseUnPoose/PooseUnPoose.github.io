@@ -38,4 +38,4 @@ async function getCellValueAndInsert() {
 }
 
 // Call the function to get the cell value and insert it
-getCellValueAndInsert();
+DOMContentLoaded(getCellValueAndInsert);

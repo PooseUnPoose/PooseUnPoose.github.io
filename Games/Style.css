@@ -1,0 +1,23 @@
+body{
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Add this line to make the ul a flex container */
+    justify-content: center; /* Add this line to justify the content horizontally */
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+li{
+    margin-right: 10px;
+}
+h2{
+    text-align: center;
+}
