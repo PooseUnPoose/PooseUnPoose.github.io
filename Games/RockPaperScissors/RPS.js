@@ -2,9 +2,6 @@
 let PlayerScore = 0;
 let ComputerScore = 0;
 
-
-
-
 function PlayerChoice(Entry){
     var PlayerChoice = Entry;
     document.getElementById("Result").style.display = "block";
@@ -97,6 +94,7 @@ function GameIcons(PlayerChoice, ComputerChoice){
             break;
     }
 }
+
 function ScoreUpdate(){
     document.getElementById("Scoreboard").style.display = "block";
     console.log("Player: " + PlayerScore + " Computer: " + ComputerScore);
