@@ -6,11 +6,12 @@ body{
     max-width: 600px;
     margin-left: 2%;
 }
-#Game{
+.Game{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60vh;
+    border: solid  black;
 }
 
 svg {
@@ -42,4 +43,17 @@ input{
     border: none;
     border-radius: 5px;
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+}
+.Options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#ChoiceButton{
+    width: 150px;
+    height: 150px;
+
+}
+#ChoiceButton>img{
+    max-width: 100%;
 }

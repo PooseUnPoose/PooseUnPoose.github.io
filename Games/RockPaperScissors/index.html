@@ -5,8 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="Style.css">
+    <script src="https://kit.fontawesome.com/3b5f8e5e0e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <div id="Result" style="display: none;">
+        <h2>Results</h2>
+        <p><span id="RoundResult" style="display: none;"></span></p>
+        <p>Score:<span id="Scoreboard"></span></p> 
+    </div>
+    <div class="Game">
+        <div class="Computer">
+            <h2>Computer</h2>
+            <img src="Images/Empty.png" alt="CC" id="ComputerChoice" style="width: 100px; height: 100px;">
+        </div>
+        <div class="Divider">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div class="Player">
+            <h2>Player</h2>
+            <img src="Images/Empty.png" alt="PC" id="PlayerChoice" style="width: 100px; height: 100px;">
+        </div>
+    </div>
+
+
+    <div class="Options">
+        <button id="ChoiceButton" onclick="PlayerChoice('Rock')"><img src="Images/Rock.png"></img></button>
+        <button id="ChoiceButton" onclick="PlayerChoice('Paper')"><img src="Images/Paper.png"></img></button>
+        <button id="ChoiceButton" onclick="PlayerChoice('Scissors')"><img src="Images/Scissors.png"></img></button>
+    <script src="RPS.js"></script>
 </body>
 </html>
