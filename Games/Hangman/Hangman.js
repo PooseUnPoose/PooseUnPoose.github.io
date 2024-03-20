@@ -78,6 +78,8 @@ function getRandomWord() {
     fetch('words.txt')
         .then(response => response.text())
         .then(data => {
+            HiddenWord = [];
+            Correctword = [];
             const words = data.split('\n');
             const randomIndex = Math.floor(Math.random() * words.length);
             const randomWord = words[randomIndex];
