@@ -75,14 +75,14 @@ function Test(){
     console.log(word);
 }
 function getRandomWord() {
-    fetch('words.txt')
+    fetch('https://random-word-api.herokuapp.com/word')
         .then(response => response.text())
         .then(data => {
             HiddenWord = [];
             Correctword = [];
             const words = data.split('\n');
             const randomIndex = Math.floor(Math.random() * words.length);
-            const randomWord = words[randomIndex];
+            const randomWord = words[randomIndex].replace('["', '').replace('"]', '');
             word = randomWord.toLowerCase();
             Correctword = word.split('');
             Hidden();
